@@ -1,0 +1,42 @@
+
+Homework04 Evaluation
+======================
+
+Nice work on this assignment!
+Here are a couple of observations and comments:
+
+
+
+scores:
+=============================
+XXXXX-Sorter.java
+   oddEvenSort implemented                   [1 pt.]
+   compiles                                  [1 pt.]
+   works as advertised                       [1 pt.]
+
+SimonGame.java
+   randomized array                          [1 pt.]
+   display/erase sequences                   [1 pt.]
+   check user's guess against array          [1 pt.]
+   increment letter count each iteration     [1 pt.]
+   play again message on incorrect entry     [1 pt.]
+   compiles                                  [1 pt.]
+   works as advertised                       [1 pt.]
+
+HuffmanCoding.java
+   count character occurrences               [1 pt.]
+   use some sort of queue to build tree      [1 pt.]
+   tree constructed correctly                [1 pt.]
+   message encoded correctly                 [1 pt.]
+   message decoded correctly                 [1 pt.]
+   compiles                                  [1 pt.]
+   works as advertised                       [1 pt.]
+
+Coding style                                 [1 pt.]
+Tests written to test all classes            [1 pt.]
+Headers in all files                         [1 pt.]
+
+Total credit 20 points
+
+You got 20 out of 20 which is 100.00% which is still an A-plus
+
