@@ -62,22 +62,3 @@ while( j >= 0 ):
 if( len(g) % CHUNK_SIZE != 0 ):
    w.append( g[0: (len(g) % CHUNK_SIZE)] )
 print( "w is g chunkified by 3 with 2 leftover: ", w )
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
