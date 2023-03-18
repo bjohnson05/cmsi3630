@@ -23,15 +23,15 @@ described on the homework web page for a possible 5 extra points!
 scores:
 =====================================================
 Queue.py
-   Queue class compiles/runs                 [1 pt.]
-   display method exists                     [1 pt.]
+   Queue class compiles/runs                 [3 pt.]
+   display method exists                     [3 pt.]
 QueueApp.py or main in Queue.py
-   QueueApp class compiles/runs              [1 pt.]
-   tests insert()                            [1 pt.]
-   tests remove()                            [1 pt.]
-   tests display()                           [1 pt.]
-   tests wrap-around insert, remove, display [1 pt.]
-Deque.py
+   QueueApp class compiles/runs              [3 pt.]
+   tests insert()                            [3 pt.]
+   tests remove()                            [3 pt.]
+   tests display()                           [3 pt.]
+   tests wrap-around insert, remove, display [3 pt.]
+Deque.py  [EC}
    Deque class compiles/runs                 [1 pt.]
    insertLeft method exists                  [1 pt.]
    insertRight method exists                 [1 pt.]
@@ -39,7 +39,7 @@ Deque.py
    removeRight method exists                 [1 pt.]
    isEmpty method exists                     [1 pt.]
    isFull method exists                      [1 pt.]
-DequeApp.py or main in Deque.py
+DequeApp.py or main in Deque.py [EC}
    tests insertLeft()                        [1 pt.]
    tests insertRight()                       [1 pt.]
    tests removeLeft()                        [1 pt.]
@@ -47,23 +47,27 @@ DequeApp.py or main in Deque.py
    tests isEmpty()                           [1 pt.]
    tests isFull()                            [1 pt.]
 CircluarLinkedList.py
-   Circular linked list class compiles/runs  [1 pt.]
-   insertion method works                    [1 pt.]
-   deletion method works                     [1 pt.]
-   searching method works                    [1 pt.]
+   Circular linked list class compiles/runs  [3 pt.]
+   insertion method works                    [3 pt.]
+   deletion method works                     [3 pt.]
+   searching method works                    [3 pt.]
 CircularStack.py
-   circular stack class compiles/runs        [1 pt.]
-   tests work as advertised                  [1 pt.]
+   circular stack class compiles/runs        [4 pt.]
+   tests work as advertised                  [4 pt.]
 Coding style
    Good names, consistent indenting          [4 pt.]
    Headers in all files                      [5 pt.]
 Josephus.py
-   Josephus problem class compiles/runs      [EC 2 pt.]
-   works as advertised                       [EC 3 pt.]
+   Josephus problem class compiles/runs      [EC 1 pt.]
+   works as advertised                       [EC 1 pt.]
 
-Total points is 35 for Queue, Deque, and Circular x2
- extra credit is 5 points for Josephus problem
+Total points is  43 points for Queue, Circular LL and Circular Stack plus Style
+ extra credit is  5 points for Josephus problem
+ extra credit is 13 points for Deque and DequeApp
 -------------------
- Grand total is 40 points
+  Grand total is 40 points
 
-You got 35 out of 35 which is 100.0% which is an A-plus
+You got 22 out of 22 which is 100% which is an A-plus
+You got 27 out of 22 which is 123% which is an A-plus
+You got 40 out of 22 which is 182% which is an A=plus
+
