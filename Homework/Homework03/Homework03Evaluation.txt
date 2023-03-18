@@ -61,13 +61,11 @@ Josephus.py
    Josephus problem class compiles/runs      [EC 1 pt.]
    works as advertised                       [EC 1 pt.]
 
-Total points is  43 points for Queue, Circular LL and Circular Stack plus Style
- extra credit is  5 points for Josephus problem
+Total points is  50 points for Queue, Circular LL and Circular Stack plus Style
+ extra credit is  2 points for Josephus problem
  extra credit is 13 points for Deque and DequeApp
 -------------------
-  Grand total is 40 points
+  Grand total is 65 points
 
-You got 22 out of 22 which is 100% which is an A-plus
-You got 27 out of 22 which is 123% which is an A-plus
-You got 40 out of 22 which is 182% which is an A=plus
-
+You got 50 out of 50 which is 100% which is an A-plus
+You got 65 out of 50 which is 130% which is an A=plus
