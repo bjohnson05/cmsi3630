@@ -20,7 +20,7 @@ class DiceSet:
 
   # track the count
    def count( self ):
-      index = self.myDice[0].getValue() + self.myDice[1].getValue()
+      index = self.myDice[0].get_value() + self.myDice[1].get_value()
       self.counts[index] += 1
       return
 

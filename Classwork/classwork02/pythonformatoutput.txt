@@ -1,0 +1,34 @@
+
+
+# Set this up to run in TIO
+
+one = 1/3
+two = 2/3
+print("\n  one-third is ", one, " and two-thirds is ", two)
+print("\n  one-third is {0:5.2f} and two-thirds is {1:5.2f}".format( one, two ))
+print(f"\n  one-third is {one:5.3f} and two-thirds is {two:6.3}" )
+# note that in the format "6.3" the "3" spaces includes the decimal point
+
+
+# example of command line arguments
+
+import sys
+
+# total arguments
+n = len(sys.argv)
+print("Total arguments passed:", n)
+
+# Arguments passed
+print("\nName of Python script:", sys.argv[0])
+
+print("\nArguments passed:", end = " ")
+for i in range(1, n):
+    print(sys.argv[i], end = " ")
+
+# Addition of numbers
+Sum = 0
+# Using argparse module
+for i in range(1, n):
+    Sum += int(sys.argv[i])
+
+print("\n\nResult:", Sum)

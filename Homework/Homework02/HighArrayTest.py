@@ -44,12 +44,19 @@ else:
    print( "Bummer, dude..." )
 
 print( "\n   Adding and removing to test getMax function..." )
+print( "   [first removing three items: 0, 55, and 99]" )
 arr.delete( 00 )          # delete 3 items
 arr.delete( 55 )
 arr.delete( 99 )
 arr.display()             # display items again
-# TODO: put in a call to 'arr.getMax()'
+print( "   Max value in array/list is now: ", arr.getMax() )
+print( "   Adding 99 back in" )
 arr.insert( 99 )
+print( "   Max value in array/list is now: ", arr.getMax() )
+arr.display()
+print( "   Removing max value...", arr.delete(arr.getMax()) )
+print( "   Removing max value...", arr.delete(arr.getMax()) )
+print( "   Removing max value...", arr.delete(arr.getMax()) )
 arr.display()
 print( "\n   Adding 11, 00, 66, and 33 to make duplicates..." )
 arr.insert( 11 )

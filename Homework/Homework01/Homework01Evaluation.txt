@@ -1,0 +1,34 @@
+
+Homework01 Evaluation
+======================
+For homework01, the focus is to make sure that your GitHub repository is set
+up and that your Java environment is installed and working properly.  The
+actual programming part of the assignment is trivial, just a simple program
+to display "Hello World!" on the terminal window.
+
+Since this is also the in-class assignment for week01, you should have the
+code in at least one or the other of the two places.  I will locate it and
+make sure it appears in both locations if it is only in one at no cost.
+
+The other part of this is to make sure you have the individual directory
+structure [folder hierarchy] set up in your repo.  If this is not correctly
+done, I will fix it for you at the cost of one point.
+
+scores:
+=============================
+Folder structure for classwork      4 out of 4 pts.
+Folder structure for homework       4 out of 4 pts.
+'Greeter.java' program committed    4 out of 4 pts.
+'Greeter.java' program compiles     4 out of 4 pts.
+'Greeter.java' program runs         4 out of 4 pts.
+
+Total possible score: 20 out of 20 for 100%
+
+Your score: 20 out of 20 which is 100% which is an A-plus
+
+=============================
+Comments:
+
+
+
+Nice work!
