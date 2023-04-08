@@ -4,6 +4,7 @@
 # author:   Dr. Johnson
 # date:     2023-01-26
 ###
+import sys
 
 def fibiterative( n ):
    print( "\n" )
@@ -22,6 +23,12 @@ def fibiterative( n ):
          print( next, " ", end="" )
    print( "\n" )
 
+def main():
+   if(len(sys.argv) == 1):
+      raise ValueError("\n   You must enter one integer number!\n")
+   else:
+      fibiterative( int(sys.argv[1]) )
+
 fibiterative( 0 )
 fibiterative( 1 )
 fibiterative( 2 )
@@ -29,3 +36,4 @@ fibiterative( 5 )
 fibiterative( 10 )
 fibiterative( 40 )
 
+main()
