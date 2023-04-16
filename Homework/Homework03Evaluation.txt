@@ -1,0 +1,73 @@
+
+Homework03 Evaluation
+======================
+For Queue.py you should have a single ended Queue class with all the methods
+we have discussed in class, including inserting, deleting, and displaying.
+You should also have a 'QueueApp.py' source file that imports your 'Queue.py'
+class and tests out all of the methods in it.
+
+For Deque.py, you should again have two files, a 'Deque.py' file which has
+all the functionality and a 'DequeApp.py' file to test it.  See the rubric
+below to see what methods are required.
+
+The circular linked list is a special case of the Python 'list' which allows
+you to have an 'endless' or 'beginning-less' list of entries.  Because of
+the way Python handles lists, you won't need to make it 'linked', but you
+WILL need it to be 'circular'.  You will also make that into a 'stack' that
+is 'LIFO' in nature for the next problem.
+
+Finally, there will be an 'extra credit' problem if you want some extra
+challenge ~ implement a python version of the 'Josephus problem' as it is
+described on the homework web page for a possible 5 extra points!
+
+scores:
+=====================================================
+Queue.py
+   Queue class compiles/runs                 [3 pt.]
+   display method exists                     [3 pt.]
+QueueApp.py or main in Queue.py
+   QueueApp class compiles/runs              [3 pt.]
+   tests insert()                            [3 pt.]
+   tests remove()                            [3 pt.]
+   tests display()                           [3 pt.]
+   tests wrap-around insert, remove, display [3 pt.]
+Deque.py  [EC}
+   Deque class compiles/runs                 [1 pt.]
+   insertLeft method exists                  [1 pt.]
+   insertRight method exists                 [1 pt.]
+   removeLeft method exists                  [1 pt.]
+   removeRight method exists                 [1 pt.]
+   isEmpty method exists                     [1 pt.]
+   isFull method exists                      [1 pt.]
+DequeApp.py or main in Deque.py [EC}
+   tests insertLeft()                        [1 pt.]
+   tests insertRight()                       [1 pt.]
+   tests removeLeft()                        [1 pt.]
+   tests removeRight()                       [1 pt.]
+   tests isEmpty()                           [1 pt.]
+   tests isFull()                            [1 pt.]
+CircluarLinkedList.py
+   Circular linked list class compiles/runs  [3 pt.]
+   insertion method works                    [3 pt.]
+   deletion method works                     [3 pt.]
+   searching method works                    [3 pt.]
+CircularStack.py
+   circular stack class compiles/runs        [4 pt.]
+   tests work as advertised                  [4 pt.]
+Coding style
+   Good names, consistent indenting          [4 pt.]
+   Headers in all files                      [5 pt.]
+Josephus.py
+   Josephus problem class compiles/runs      [EC 1 pt.]
+   works as advertised                       [EC 1 pt.]
+
+Total points is  50 points for Queue, Circular LL and Circular Stack plus Style
+ extra credit is  2 points for Josephus problem
+ extra credit is 13 points for Deque and DequeApp
+-------------------
+  Grand total is 65 points
+
+You got 50 out of 50 which is 100% which is an A-plus
+You got 52 out of 50 which is 104% which is an A-plus
+You got 63 out of 50 which is 126% which is an A=plus
+You got 65 out of 50 which is 130% which is an A=plus

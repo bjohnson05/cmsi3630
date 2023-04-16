@@ -1,0 +1,54 @@
+
+Homework02 Evaluation
+======================
+For the HighArray.py source file, be sure to use good coding practices to
+make your code pretty, artful, and maintainable.
+
+You must add a "getMax()" method to the HighArray.py file, which returns
+the largest "key" [another word for "value"] in the array.  You must also
+add a "noDups()" method which will scan through the array elements to find
+and remove any duplicated values.  For example, in the array that contains
+"33 33 33 44 44 55 55 66" the result should be "33 44 55 66".  Be sure to
+research the way python handles lists ~ it will make your life easier!
+
+For the HighArrayApp.py file don't include this code in the same class file
+as "HighArray.PY".  You should have two separate files for this, both in
+the same directory, so that you can 'import' the 'HighArray.py' file as a
+'module' into the 'HighArrayApp.py' program.
+
+Submit both your source code files to your repo.  THERE MUST BE TWO PYTHON
+SOURCE FILES IN YOUR REPO FOR THIS ASSIGNMENT.
+
+I have mentioned in class that it is a good idea to have a small "header"
+section in your files.  If you elect to include that in this assignment,
+you will get two extra credit points.  You can use either the "#" tags or
+the 'triple tic' comment method for block comments, which ever you like.
+
+There are a total of 20 points for this assignment as shown below.  If you
+get extra credit it is possible to get more than 100% for the assignment.
+
+scores:
+=============================
+HighArray.py
+   coding style                     [3 pt.]
+   getMax() exists                  [1 pt.]
+   noDups() exists                  [1 pt.]
+   compiles/runs                    [1 pt.]
+HighArrayApp.py
+   coding style                     [2 pt.]
+   compiles                         [1 pt.]
+   min 5 new tests for getMax()     [5 pt.]
+   test[s] for noDups               [1 pt.]
+   runs and passes all tests        [5 pt.]
+headers in both files               [2 pts. EC]
+
+Total possible score: 20 out of 20 which is 100% which is an A-plus
+
+Your score: 20 out of 20 which is 100% which is an A-plus
+
+=============================
+Comments:
+
+
+
+Nice work!

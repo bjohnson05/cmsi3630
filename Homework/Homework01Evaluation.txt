@@ -1,0 +1,41 @@
+
+Homework01 Evaluation
+======================
+For homework01, the focus is to make sure that your GitHub repository is set
+up and that your Java environment is installed and working properly.  The
+actual programming for the first part of the assignment is trivial, just a
+simple program to display "Hello World!" on the terminal window which was
+done in class anyhow..
+
+Since this is also the in-class assignment for week01, you should have the
+code in at least one or the other of the two places, either classwork01 or
+homework01 [or both].  I will locate it and make sure it appears in both
+locations if it is only in one at no cost.
+
+The second part of this is to make sure you have the directory structure
+[folder hierarchy] set up in your repo.  If this is not correctly done, I
+will fix it for you of course.
+
+Finally, part two of the homework is the first 'real' algorithm we looked at
+as described in class, the 'piSolver.py' program to estimate the value of
+PI using a Monte Carlo Simulation approach.
+
+scores:
+=============================
+Structure for classwork complete    2 out of 2 pts.
+Structure for homework complete     2 out of 2 pts.
+'sayHi.py' program committed        4 out of 4 pts.
+'sayHi.py' program compiles/runs    4 out of 4 pts.
+'piSolver.py' program committed     4 out of 4 pts.
+'piSolver.py' program compiles/runs 4 out of 4 pts.
+
+Total possible score: 20 out of 20 for 100%
+
+Your score: 20 out of 20 which is 100% which is an A-plus
+
+=============================
+Comments:
+
+
+
+Nice work!
