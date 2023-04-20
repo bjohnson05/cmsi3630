@@ -1,5 +1,5 @@
 ###
-# filename: DFsearcher.py
+# filename: DFtraverser.py
 # purpose: demonstration of graph and depth first search
 # author:   Dr. Johnson
 # date:     2023-04-09
@@ -7,7 +7,7 @@
 
 from TheGraph import TheGraph
 
-class DFsearcher():
+class DFtraverser():
 
    def __init__( self, size ):
       self.graph = TheGraph( size )
@@ -31,7 +31,7 @@ class DFsearcher():
             print( i.displayMe(), end = "" )
             print()
 
-   def dfs( self, graph, vertex ):
+   def dft( self, graph, vertex ):
       vertex = graph.vList[graph.getIndex( vertex )]
       if not vertex.isVisited():
          vertex.visit()
@@ -41,7 +41,7 @@ class DFsearcher():
          for i in vertex.adjacent:
             next = graph.vList[graph.getIndex( i )]
             if not next.isVisited():
-               self.dfs( graph, next.getValue() )
+               self.dft( graph, next.getValue() )
          self.pop()
          return
 
@@ -49,7 +49,7 @@ class DFsearcher():
 print( "\n\n   Graph tests complete ~ running DFsearcher tests." )
 print( "   ================================================" )
 print( "   Creating graph for vertices 'A' through 'I'..." )
-dpth = DFsearcher( 9 )
+dpth = DFtraverser( 9 )
 dpth.graph.printGraph()
 
 print( "   Inserting nine vertices..." )
@@ -76,5 +76,5 @@ dpth.graph.connect( 'G', 'I' )
 dpth.graph.printGraph()
 
 print( "\n   Calling DFS routine..." )
-dpth.dfs( dpth.graph, 'A' )
+dpth.dft( dpth.graph, 'A' )
 print( "   Result of DFS, order is:\n     ", dpth.printOrder )
