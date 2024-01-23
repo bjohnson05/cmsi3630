@@ -3,11 +3,11 @@
 
 The purpose of this assignment is to broaden your understanding of data structures by understanding how _HAMMING DISTANCES_ and the _(7, 4) Hamming Code_ scheme is implemented.  The Hamming Code is one way of doing *ERROR DETECTION AND CORRECTION* [or "EDAC"] which is used in network transmissions of all kinds to detect if an error has occurred during transmission, and correct it if possible.
 
-In this assignment you will implement a program in Java which will accept as its input the name of a file containing a list of strings corresponding to seven bit sequences and will determine whether or not they correspond to valid, or invalid signals.  In addition, for those strings that are determined to be invalid, the likely correct string is to be provided as well.  In other words, if the bit string is valid [no errors] output the proper string including it's Hamming code bits showing both the original file line and the expanded Hamming coded line.
+In this assignment you will implement a program in python which will accept as its input the name of a file containing a list of strings corresponding to seven bit sequences and will determine whether or not they correspond to valid, or invalid signals.  In addition, for those strings that are determined to be invalid, the likely correct string is to be provided as well.  In other words, if the bit string is valid [no errors] output the proper string including it's Hamming code bits showing both the original file line and the expanded Hamming coded line.
 
 ## Specification
 
-Define a program called <code>HammingCheck</code> which will accept as its input the name of a file containing a collection of strings corresponding to seven bit sequences will determine whether or not they correspond to valid or invalid signals.  In each case, the likely message is to be output as well.
+Define a program called <code>HammingCheck</code> which will accept as its input the name of a file containing a collection of strings corresponding to seven bit sequences.  Your program will determine whether or not they correspond to valid or invalid signals.  In each case, the likely message is to be output as well.  If the string is valid, simply output that string.  If the string is determined to be invalid, try to correct it and output the corrected string.
 
 Hamming Encoding uses the idea of **parity** to detect if a bit pattern contains the correct bit values.  You can find an explanation of how it works at [this location](https://www.tutorialspoint.com/hamming-code-for-single-error-correction-double-error-detection).
 
@@ -36,17 +36,17 @@ The idea of this program is for you to implement, using the *Hamming Distance* m
 
 The program <code>HammingCheck</code> is intended to be run via the following command-line invocation:
 <pre>
-     $ java HammingCheck input.txt
+     $ python HammingCheck input.txt
 </pre>
 
 If no input file is specified or if the input file is not found, an appropriate error message must be displayed. For example:
 <pre>
-     $ java HammingCheck
+     $ python HammingCheck
      
         HammingCheck: no input file was specified!
            Please try again
            
-     $ java HammingCheck bogusfile.txt
+     $ python HammingCheck bogusfile.txt
      
         HammingCheck: input file 'bogusfile.txt' does not exist or cannot be opened.
            Please try again
@@ -56,7 +56,7 @@ If no input file is specified or if the input file is not found, an appropriate 
 *If a valid file is specified as input*, then for every string in the file you must output its classification [either valid or invalid], and the decrypted string if applicable.  Using the file input.txt mentioned above, your program should behave as follows:
 
 <pre>
-   $ java HammingCheck input.txt
+   $ python HammingCheck input.txt
       1110000 - valid, data sent was 1000
       0101010 - valid, data sent was 0010
       1101011 - invalid, data sent was 0001
@@ -67,12 +67,9 @@ If no input file is specified or if the input file is not found, an appropriate 
 
 # Compilation Notes
 
-Your program must compile from the command line or terminal using the following invocation:
-<pre>
-   $ javac *.java
-</pre>
+Your program must run from the command line or terminal using the syntax given above.
 
-Do not submit any IDE specific files and in the interest of simplicity do not use packages for this assignment.  If your program does not compile using the command mentioned above you will receive no credit.
+Do not submit any IDE specific files and in the interest of simplicity do not use packages for this assignment.  If your program does not run using the command mentioned above you will receive no credit.
 
 # Additional Development Notes
 
