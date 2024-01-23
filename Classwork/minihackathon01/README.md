@@ -42,12 +42,12 @@ After every move entry, the game state must be updated, and then the program mus
 
 # Compilation Notes
 
-Your program must compile from the command line or terminal using the following invocation:
+Your program must run from the command line or terminal using the following invocation to use three disks:
 <pre>
-   $ javac *.java
+   $ python towers 3
 </pre>
 
-Do not submit any IDE specific files and in the interest of simplicity do not use packages for this assignment.  If your program does not compile using the command mentioned above you will receive no credit.
+Do not submit any IDE specific files and in the interest of simplicity do not use packages for this assignment.  If your program does not run using the command mentioned above you will receive no credit.
 
 # Additional Development Notes
 
