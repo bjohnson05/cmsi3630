@@ -15,6 +15,8 @@ The enigma used a simple offset substitution that mapped characters to the alpha
 
 An added layer of complexity came from the fact that the machine had multiple encoding wheels in each device, anywhere from three to five wheels, or "rotors" as they were called.  Further, there was a "plugboard" that could be used to additionally scramble things before the letters went to the rotors for offsetting.  You don't need to implement more than three rotors for this simulation.  The plugboard is optional; if you decide to implement that part, you will need to define and declare the encoding for it.
 
+The starting position for the rotors was specified in tables that were contained in a "code book".  Each page in that book corresponded to a specific date on which the rotor starting positions were changed.  The starting positions were set out in the tables for that date so that both the encoding and decoding could match.  This is not something you need to implement for this project, since you are providing an offset as a command line argument [see below].
+
 ## Input File Specification
 
 For this assignment you may assume that the input file contains a text message that is formatted as ASCII text.  There may be multiple lines in the file, so you will need to read all of the lines to get the entire message.  You may put the single string "EOF" at the end of the text, on its own line, if desired, to allow an indication that it's the end of the message.  This situation will allow you to include comment lines after the "EOF" which will be ignored.  You can also come up with your own scheme to interpret which lines are data, if you like, or you can treat all lines as data to be encoded.
@@ -27,7 +29,7 @@ The idea of this program is for you to implement, using the "*Alphabetical offse
 
 The program <code>EnigmaSim</code> is intended to be run via the following command-line invocation:
 <pre>
-     $ python EnigmaSim <rotors> <offset> messagefile.txt
+     $ python EnigmaSim  &lt;rotors&gt;  &lt;offset&gt;  messagefile.txt
 </pre>
 
 If no input file is specified or if the input file is not found, an appropriate error message must be displayed. For example:
