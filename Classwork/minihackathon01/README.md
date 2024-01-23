@@ -31,7 +31,6 @@ After every move entry, the game state must be updated, and then the program mus
    post 0:  [1][2][3]
    post 1:  [empty]
    post 2:  [empty]
-   after show in constructor: posts[0].peek() is: 1
 
   Enter the disk to be moved, 1 through 3 =>> 1
   Enter the post to move the disk onto, A, B, or C =>> B
