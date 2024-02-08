@@ -29,9 +29,32 @@ class BrobInt:
          b.append( a[j] )
          j -= 1
       return b
-         
+
+   ## TODO: implement the addition function by filling in the
+   ##   code under the comments below
    def add( self, other_brob_int ):
+      carry = 0
       sum = []
+      shorter = []
+      longer = []
+      ## find the longer of the two numbers
+      ##   put the two numbers into the appropriate lists
+
+      ## find the lengths of the two number
+
+      ## add up the two numbers,
+      ##   stopping after the shorter one has been added
+      ##   to the shortest part of the longer one
+
+      ## Now if they are NOT the same length
+      ##   add the carry [if needed] to the next digit of
+      ##   the longer number, then continue adding in the
+      ##   rest of the longer number
+
+      ## If there is still a carry, handle it
+
+      ## turn it back into a string and return the result
+
       print( "\n   OOPS!  Sorry, 'add()' not implemented yet." )
       sum = self.reverse_me( sum )
       return_value = "".join( sum )
