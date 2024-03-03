@@ -12,12 +12,15 @@ class BrobInt:
    my_value   = []      # list containing the 'unpacked' string values
    backwards  = []      # list containing REVERSE of unpacked values
                         #  which facilitates 'normal order' addition [R to L]
+   CHUNK_SIZE = 9       # constant number of digits in each chunk
 
    # constructor initialized the class fields
    def __init__( self, value ):
       self.string_rep = value
       self.my_value   = [*self.string_rep]      # this is the 'unpacking' operator
       self.backwards  = self.reverse_me( self.my_value )
+      self.string_bak = backwards.join( self.backwards )
+      self.chunked    = self.chunkify( self.backwards )
 
    # helper method to reverse the list
    def reverse_me( self, a ):
@@ -27,6 +30,20 @@ class BrobInt:
          b.append( a[j] )
          j -= 1
       return b
+
+   # method to 'chunkify' the unpacked string
+   #  based on 'backwards' list, returns chunkified list
+   def chunkify( self, a ):
+      c     = []
+      count = int( len(a) / self.CHUNK_SIZE )
+      left  = int( len(a) % self.CHUNK_SIZE )
+      start = 0
+      stop  = self.CHUNK_SIZE
+      print( "\n   in chunkify: count: {} left: {} start: {} stop: {}".format( count, left, start, stop ) )
+#      for( i in range( count ):
+
+      c = a.copy()
+      return c
 
    # the 'add()' function which is the purpose of the exercise
    def add( self, other_brob_int ):
