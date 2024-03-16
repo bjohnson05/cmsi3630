@@ -6,19 +6,21 @@ we have discussed in class, including inserting, deleting, and displaying.
 You should also have a 'QueueApp.py' source file that imports your 'Queue.py'
 class and tests out all of the methods in it.
 
-For Deque.py, you should again have two files, a 'Deque.py' file which has
-all the functionality and a 'DequeApp.py' file to test it.  See the rubric
-below to see what methods are required.
-
 The circular linked list is a special case of the Python 'list' which allows
 you to have an 'endless' or 'beginning-less' list of entries.  Because of
 the way Python handles lists, you won't need to make it 'linked', but you
 WILL need it to be 'circular'.  You will also make that into a 'stack' that
 is 'LIFO' in nature for the next problem.
 
-Finally, there will be an 'extra credit' problem if you want some extra
-challenge ~ implement a python version of the 'Josephus problem' as it is
-described on the homework web page for a possible 5 extra points!
+Your coding style is also part of the evaluation.  Good variable and function
+names, consistent indenting, artful code creation, good logic, etc.
+
+Finally, there will be two 'extra credit' problems if you want some extra
+challenges ~ implement a python version of the 'Josephus problem' as it is
+described on the homework web page for a possible 7 extra points, and/or you
+can do the Deque, for which you should again have two files, a 'Deque.py' file
+which has all the functionality and a 'DequeApp.py' file to test it.  See the
+rubric below to see what methods are required.
 
 scores:
 =====================================================
@@ -32,20 +34,20 @@ QueueApp.py or main in Queue.py
    tests display()                           [3 pt.]
    tests wrap-around insert, remove, display [3 pt.]
 Deque.py  [EC}
-   Deque class compiles/runs                 [1 pt.]
-   insertLeft method exists                  [1 pt.]
-   insertRight method exists                 [1 pt.]
-   removeLeft method exists                  [1 pt.]
-   removeRight method exists                 [1 pt.]
-   isEmpty method exists                     [1 pt.]
-   isFull method exists                      [1 pt.]
-DequeApp.py or main in Deque.py [EC}
-   tests insertLeft()                        [1 pt.]
-   tests insertRight()                       [1 pt.]
-   tests removeLeft()                        [1 pt.]
-   tests removeRight()                       [1 pt.]
-   tests isEmpty()                           [1 pt.]
-   tests isFull()                            [1 pt.]
+   Deque class compiles/runs                 [EC 1 pt.]
+   insertLeft method exists & works          [EC 1 pt.]
+   insertRight method exists & works         [EC 1 pt.]
+   removeLeft method exists & works          [EC 1 pt.]
+   removeRight method exists & works         [EC 1 pt.]
+   isEmpty method exists & works             [EC 1 pt.]
+   isFull method exists & works              [EC 1 pt.]
+DequeApp.py or main in Deque.py [EC]
+   tests insertLeft()                        [EC 1 pt.]
+   tests insertRight()                       [EC 1 pt.]
+   tests removeLeft()                        [EC 1 pt.]
+   tests removeRight()                       [EC 1 pt.]
+   tests isEmpty()                           [EC 1 pt.]
+   tests isFull()                            [EC 1 pt.]
 CircluarLinkedList.py
    Circular linked list class compiles/runs  [3 pt.]
    insertion method works                    [3 pt.]
@@ -58,16 +60,16 @@ Coding style
    Good names, consistent indenting          [4 pt.]
    Headers in all files                      [5 pt.]
 Josephus.py
-   Josephus problem class compiles/runs      [EC 1 pt.]
-   works as advertised                       [EC 1 pt.]
+   Josephus problem compiles/runs            [EC 2 pt.]
+   works as advertised                       [EC 5 pt.]
 
 Total points is  50 points for Queue, Circular LL and Circular Stack plus Style
- extra credit is  2 points for Josephus problem
+ extra credit is  7 points for Josephus problem
  extra credit is 13 points for Deque and DequeApp
 -------------------
-  Grand total is 65 points
+  Grand total is 70 points
 
 You got 50 out of 50 which is 100% which is an A-plus
-You got 52 out of 50 which is 104% which is an A-plus
-You got 63 out of 50 which is 126% which is an A=plus
-You got 65 out of 50 which is 130% which is an A=plus
+You got 57 out of 50 which is 114% which is an A-plus
+You got 70 out of 50 which is 140% which is an A-plus
+
