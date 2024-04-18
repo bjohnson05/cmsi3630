@@ -1,12 +1,26 @@
 import random
 
 class RBNode:
-   def __init__( self, val ):
+   def __init__( self, value ):
       self.red = False
       self.parent = None
-      self.val = val
+      self.value = value
       self.left = None
       self.right = None
+
+   # get one child from this parent node
+   def get_child( self, child ):
+      child = child.upper()
+      if( child == "L" ):
+         return self.left
+      elif( child == "R" ):
+         return self.right
+      else:
+         raise( "   Illegal Argument Exception..." )
+
+   # get this node's data value
+   def get_data( self ):
+       return self.value
 
 class RBTree:
    def __init__( self ):
@@ -16,9 +30,9 @@ class RBTree:
       self.nil.right = None
       self.root = self.nil
 
-   def insert( self, val ):
+   def insert( self, value ):
       # Ordinary Binary Search Insertion
-      new_node = RBNode( val )
+      new_node = RBNode( value )
       new_node.parent = None
       new_node.left = self.nil
       new_node.right = self.nil
@@ -26,14 +40,14 @@ class RBTree:
 
       parent = None
 
-      current = self.root
+      current_node = self.root
 
-      while current != self.nil:
-         parent = current
-         if new_node.val < current.val:
-            current = current.left
-         elif new_node.val > current.val:
-            current = current.right
+      while current_node != self.nil:
+         parent = current_node
+         if new_node.value < current_node.value:
+            current_node = current_node.left
+         elif new_node.value > current_node.value:
+            current_node = current_node.right
          else:
             return
 
@@ -41,7 +55,7 @@ class RBTree:
       new_node.parent = parent
       if parent == None:
          self.root = new_node
-      elif new_node.val < parent.val:
+      elif new_node.value < parent.value:
          parent.left = new_node
       else:
          parent.right = new_node
@@ -81,14 +95,14 @@ class RBTree:
                self.rotate_right( new_node.parent.parent )
       self.root.red = False
 
-   def exists( self, val ):
-      curr = self.root
-      while curr != self.nil and val != curr.val:
-         if val < curr.val:
-            curr = curr.left
+   def exists( self, value ):
+      current_node = self.root
+      while current_node != self.nil and value != current_node.value:
+         if value < current_node.value:
+            current_node = current_node.left
          else:
-            curr = curr.right
-      return curr
+            current_node = current_node.right
+      return current_node
 
    # rotate left at node x
    def rotate_left( self, x ):
@@ -129,30 +143,35 @@ class RBTree:
       print_tree( self.root, lines )
       return '\n'.join( lines )
 
-def print_tree( node, lines, level=0 ):
-   if node.val != 0:
-      print_tree( node.left, lines, level + 1 )
-      lines.append( '-' * 4 * level + '> ' +
-                  str( node.val ) + ( 'R' if node.red else 'B' ) )
-      print_tree( node.right, lines, level + 1 )
-
 def in_order_printer( current_node ):
    if( current_node == None ):
       return
    else:
       in_order_printer( current_node.get_child( "L" ) )
-      print( "( ", current_node.get_data( ), " )", end="" )
+      if current_node.get_data() != 0:
+         print( "(", current_node.get_data(), ")", end="" )
       in_order_printer( current_node.get_child( "R" ) )
 
-def get_nums( num ):
-   random.seed( 1 )
-   nums = []
-   for _ in range( num ):
-      nums.append( random.randint( 1, num-1 ) )
-   return nums
+def post_order_printer( current_node ):
+   if( current_node == None ):
+      return
+   else:
+      post_order_printer( current_node.get_child( "L" ) )
+      post_order_printer( current_node.get_child( "R" ) )
+      if current_node.get_data() != 0:
+         print( "(", current_node.get_data(), ")", end="" )
+
+def pre_order_printer( current_node ):
+   if( current_node == None ):
+      return
+   else:
+      if current_node.get_data() != 0:
+         print( "(", current_node.get_data(), ")", end="" )
+      pre_order_printer( current_node.get_child( "L" ) )
+      pre_order_printer( current_node.get_child( "R" ) )
 
 def main( ):
-   tree = RBTree( )
+   tree = RBTree()
    tree.insert( 23 )
    tree.insert( 17 )
    tree.insert( 29 )
@@ -165,6 +184,12 @@ def main( ):
    tree.insert( 31 )
    tree.insert( 37 )
    tree.insert( 27 )
-   print( tree )
 
+   print( "\n\n   In order:   ", end="" )
+   in_order_printer( tree.root )
+   print( "\n   Pre-order:  ", end="" )
+   pre_order_printer( tree.root )
+   print( "\n   Post-order: ", end="" )
+   post_order_printer( tree.root )
+   print()
 main( )

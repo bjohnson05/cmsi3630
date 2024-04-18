@@ -22,7 +22,7 @@ class TheGraph():
 
   # method to insert a vertex into the graph
   #   note: uses the NAME data for the vertex
-   def insert( self, vName ):
+   def insertVertex( self, vName ):
       v = Vertex( vName )
       self.vList.append( v )
       return
@@ -63,19 +63,20 @@ print( "   Making new empty graph with room for 9 vertices" )
 g = TheGraph( 9 )
 
 print( "   Inserting vertices 'A' through 'I'..." )
-g.insert( 'A' )
-g.insert( 'B' )
-g.insert( 'C' )
-g.insert( 'D' )
-g.insert( 'E' )
-g.insert( 'F' )
-g.insert( 'G' )
-g.insert( 'H' )
-g.insert( 'I' )
+g.insertVertex( 'A' )
+g.insertVertex( 'B' )
+g.insertVertex( 'C' )
+g.insertVertex( 'D' )
+g.insertVertex( 'E' )
+g.insertVertex( 'F' )
+g.insertVertex( 'G' )
+g.insertVertex( 'H' )
+g.insertVertex( 'I' )
 g.printGraph()
 
 print( "\n   index of the F vertex: ", g.getIndex( 'F' ) )
-print( "   value of the F vertex: ", g.vList[g.getIndex( 'F' )] )
+print( "   vList of the F vertex: ", g.vList[g.getIndex( 'F' )] )
+print( "   value of the F vertex: ", g.vList[g.getIndex( 'F' )].displayMe() )
 
 print( "\n   joining vertices..." )
 g.connect( 'A', 'B' )
@@ -91,6 +92,9 @@ g.printGraph()
 print( "   Testing getIndex() method" )
 print( "   index of 'E' is: ", g.getIndex( 'E' ) )
 print( "   index of 'Q' is: ", g.getIndex( 'Q' ) )
+print( "\n   index of the F vertex: ", g.getIndex( 'F' ) )
+print( "   vList of the F vertex: ", g.vList[g.getIndex( 'F' )] )
+print( "   value of the F vertex: ", g.vList[g.getIndex( 'F' )].displayMe() )
 
 print( "\n\n   Graph tests complete." )
 print( "   =====================" )
