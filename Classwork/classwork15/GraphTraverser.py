@@ -15,7 +15,6 @@ class GraphTraverser():
       self.stack = []
       self.queue = []
       self.size = 0
-      self.front = 0
       self.printOrder = []
 
   # method to push a vertex onto the stack
@@ -57,8 +56,7 @@ class GraphTraverser():
   # method to remove a vertex off the queue
    def queueRemove( self ):
       self.size -= 1
-      self.queue.pop(self.front)
-      self.front += 1
+      self.queue.pop( 0 )
       return
 
   # breadth-first traversal method [iterative]
@@ -66,31 +64,20 @@ class GraphTraverser():
   #   to the iteration.
    def bft( self, graph, vLetter ):
       vertex = graph.vList[graph.getIndex( vLetter )]
-      print( "   in bft, vertex: ", vertex.displayMe() )
       if not vertex.isVisited():
          vertex.visit()
-         print( "      visited vertex: ", vertex.displayMe() )
-      self.queueInsert( vertex )
-      self.printOrder.append( vertex.displayMe() )
-      print( "      added vertex to queue and printOrder" )
-      print( "      len(queue): ", len( self.queue ) )
-      for i in self.queue:
-         print( "      queue contents @1: ", i.displayMe() )
-      print( "      printOrder: ", self.printOrder )
-      print( "      len(vertex.adjacent): ", len( vertex.adjacent ) )
+      if len( self.queue ) == 0:
+         self.queueInsert( vertex )
+         self.printOrder.append( vertex.displayMe() )
       if( len( vertex.adjacent ) != 0 ):
          for i in vertex.adjacent:
             next = graph.vList[graph.getIndex( i )]
-            print( "      looping ~ next: ", next.displayMe() )
             if not next.isVisited():
                self.queueInsert( next )
-         for i in self.queue:
-            print( "      queue contents @2: ", i.displayMe() )
+               self.printOrder.append( next.displayMe() )
          self.queueRemove()
-         for i in self.queue:
-            print( "      queue contents @3: ", i.displayMe() )
-         next = self.queue[self.front - 1]
-         print( "      next one is: ", next.displayMe() )
+         if len( self.queue ) != 0:
+            next = self.queue[0]
          if not next.isVisited():
             self.bft( graph, next.getValue() )
       return
@@ -200,4 +187,66 @@ net.graph.printGraph()
 
 print( "\n   Calling BFT routine, starting at vertex 'A'..." )
 net.bft( net.graph, 'A' )
+print( "   Result of BFT, order is:\n     ", net.printOrder )
+
+print( "   Creating new graph for vertices 'A' through 'I'..." )
+net = GraphTraverser( 9 )
+net.graph.printGraph()
+
+print( "   Inserting nine vertices..." )
+net.graph.insertVertex( 'A' )
+net.graph.insertVertex( 'B' )
+net.graph.insertVertex( 'C' )
+net.graph.insertVertex( 'D' )
+net.graph.insertVertex( 'E' )
+net.graph.insertVertex( 'F' )
+net.graph.insertVertex( 'G' )
+net.graph.insertVertex( 'H' )
+net.graph.insertVertex( 'I' )
+net.graph.printGraph()
+
+print( "\n   Connecting vertices per sample graph from class..." )
+net.graph.connect( 'A', 'B' )
+net.graph.connect( 'A', 'C' )
+net.graph.connect( 'A', 'D' )
+net.graph.connect( 'A', 'E' )
+net.graph.connect( 'B', 'F' )
+net.graph.connect( 'F', 'H' )
+net.graph.connect( 'D', 'G' )
+net.graph.connect( 'G', 'I' )
+net.graph.printGraph()
+
+print( "\n   Calling BFT routine, starting at vertex 'G'..." )
+net.bft( net.graph, 'G' )
+print( "   Result of BFT, order is:\n     ", net.printOrder )
+
+print( "   Creating new graph for vertices 'A' through 'I'..." )
+net = GraphTraverser( 9 )
+net.graph.printGraph()
+
+print( "   Inserting nine vertices..." )
+net.graph.insertVertex( 'A' )
+net.graph.insertVertex( 'B' )
+net.graph.insertVertex( 'C' )
+net.graph.insertVertex( 'D' )
+net.graph.insertVertex( 'E' )
+net.graph.insertVertex( 'F' )
+net.graph.insertVertex( 'G' )
+net.graph.insertVertex( 'H' )
+net.graph.insertVertex( 'I' )
+net.graph.printGraph()
+
+print( "\n   Connecting vertices per sample graph from class..." )
+net.graph.connect( 'A', 'B' )
+net.graph.connect( 'A', 'C' )
+net.graph.connect( 'A', 'D' )
+net.graph.connect( 'A', 'E' )
+net.graph.connect( 'B', 'F' )
+net.graph.connect( 'F', 'H' )
+net.graph.connect( 'D', 'G' )
+net.graph.connect( 'G', 'I' )
+net.graph.printGraph()
+
+print( "\n   Calling BFT routine, starting at vertex 'H'..." )
+net.bft( net.graph, 'H' )
 print( "   Result of BFT, order is:\n     ", net.printOrder )
