@@ -45,6 +45,9 @@ class GraphTraverser():
             if not next.isVisited():
                self.dft( graph, next.getValue() )
          self.pop()
+
+         # This is the "base case" for the recursion
+         #  believe it or not...  :D
          return
 
   # method to insert a vertex onto the queue
@@ -80,6 +83,9 @@ class GraphTraverser():
             next = self.queue[0]
          if not next.isVisited():
             self.bft( graph, next.getValue() )
+
+      # This is the "base case" for the recursion
+      #  believe it or not...  :D
       return
 
 

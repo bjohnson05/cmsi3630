@@ -22,6 +22,7 @@ class HuffmanCode:
       self.codeString = ""
       self.encoding = ""
       self.SIZE_OF_ALPHABET = 95      # index @ zero with space as char - 32
+      self.lenOriginal = 0
 
       self.sayInstructions();
       self.inString = input( "\n\n\n   Enter your message: " );
@@ -30,6 +31,8 @@ class HuffmanCode:
          self.inString = input( "Enter your continued message [empty line will quit entry]: " )
       self.myCharList = [*self.message]
       print( "\n   myCharList: ", self.myCharList )
+      self.lenOriginal = len(self.message)
+      print( "     which is: ", (self.lenOriginal * 8), " bits." )
 
   ###
   #  Method to output program instructions to the user
@@ -83,7 +86,6 @@ class HuffmanCode:
   #  Method to compare two Huffman nodes 'table'
   #   if node1 number value > node2 number value then return positive
   #   if node1 number value < node2 number value then return negative or zero
-  #   if
   ###
    def compareTo( self, node1, node2 ):
       if( node1.frequency > node2.frequency ):
@@ -95,7 +97,6 @@ class HuffmanCode:
             return ord( node2.myChar ) - ord( node1.myChar )
       else:
          return node1.frequency - node2.frequency
-
 
   ###
   #  Method to sort the HuffmanNodes in the Huffman table
@@ -219,6 +220,10 @@ hc.inOrderTraversal( huffmanTable[0] )
 
 # step 6
 print( "\n\n   Encoded message is: ", hc.encoding )
+print( "     which is: ", len(hc.encoding), " bits." )
+print( "     original: ", (hc.lenOriginal * 8), " bits." )
+print( "     that is: {0:8.4f} percent of the original length.".
+     format((len(hc.encoding) / (hc.lenOriginal * 8)) * 100))
 
 # now feed the encoding string back through the tree to
 #  decode the message
