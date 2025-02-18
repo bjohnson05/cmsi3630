@@ -13,8 +13,11 @@ class ListNode:
       self.data = input
       self.next = None
 
+   def getData( self ):
+      return self.data
 
 # test it out
+print( "\n\n   TESTING LISTNODE CLASS...\n" )
 ln = ListNode( 37 )
-print( "   ln.data is: ", ln.data )
+print( "   ln.data is: ", ln.getData() )
 

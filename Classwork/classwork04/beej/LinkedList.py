@@ -1,51 +1,11 @@
-### 
-# filename: LinkedList.py 
+###
+# filename: LinkedList.py
 # purpose:  demonstrate a linked list in python
-# author:   Dr. Johnson 
+# author:   Dr. Johnson
 # date:     2023-01-06
-### 
-
 ###
-# this is the Node class for the list
-###
-class ListNode:
 
-  # constructor for the ListNode
-   def __init__( self, input = None ): # default value!
-      self.data = input
-      self.nextNode = None
-
-###
-# the iterator class to MANAGE the list
-###
-# class Iterator:
-#    currentNode = None
-
-#   # constructor for the Iterator
-#    def __init__( self, localList ):
-#       print( "   ...in Iterator constructor, localList.size is: ", localList.getSize() )
-#       print( "   ...in Iterator constructor, printing localList..." )
-#       #localList.printList()
-#       currentNode = localList.head
-#       print( "   ...in Iterator constructor, currentNode is: ", currentNode )
-#       print( "   ...in Iterator constructor, localList.head is: ", localList.head )
-
-#   # set the next field of the current ListNode
-#   #   this will move the current 'pointer' down the line
-#    def next( self ):
-#       if( self.currentNode == None ):
-#          print( "   Looks like the list is empty." )
-#          return
-#       else:
-#          currentNode = currentNode.next
-
-#   # check if the current ListNode is the tail
-#    def hasNext( self ):
-#       return ( (currentNode != None) and (currentNode.next != None) )
-
-#   # helper method to get the current data value
-#    def getCurrentData( self ):
-#       return self.currentNode
+from ListNode import ListNode
 
 ###
 # this is the linked list itself
@@ -60,13 +20,12 @@ class LinkedList:
       self.head = None
       self.size = 0
 
-   def __iter__( self ):
-      self.listCurrent = self.head
-      return self
+#   def __iter__( self ):
+#      self.listCurrent = self.head
+#      return self
 
-   def __next__( self ):
-      return self.listCurrent.nextNode
-
+#   def __next__( self ):
+#      return self.listCurrent.nextNode
 
   # return the number of nodes in the list
    def getSize( self ):
@@ -78,6 +37,13 @@ class LinkedList:
       self.head = ListNode( dataToAdd )
       self.head.nextNode = currentHead
       self.size += 1
+
+  # helper method to print the list
+   def printList1( self ):
+      currentNode = self.head
+      for i in range( 0, self.getSize() ):
+         print( self.head.getData() )
+         self.head = self.head.nextNode
 
   # get an Iterator that is pointing to a specific
   #   ListNode in the linked list
@@ -94,11 +60,4 @@ class LinkedList:
    #          it.current = it.current.next
    #          index -= 1
    #       return it
-
-  # helper method to print the list
-   def printList( self ):
-      currentNode = self.head
-      for i in range( 0, self.size ):
-         print( self.head.data )
-         self.head = self.head.nextNode
 
