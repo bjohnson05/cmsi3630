@@ -20,6 +20,7 @@ my_list.prepend(  3 )
 my_list.prepend(  2 )
 print( "\nList now has size:{}".format( my_list.getSize() ) )
 my_list.print_list()
+my_list.printme()
 
 it = iter( my_list )
 print()

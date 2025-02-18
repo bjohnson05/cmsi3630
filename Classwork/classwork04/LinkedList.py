@@ -52,10 +52,17 @@ class LinkedList:
       self.head.next_node = current_head
       self.size += 1
 
-  # Helper method to print the list.
+  # Helper method to print the list using for loop.
    def print_list( self ):
       current_node = self.head
       for i in range( self.size ):
          print( current_node.data )
          current_node = current_node.next_node
 
+  # Helper method to print the list using iterator.
+   def printme( self ):
+      it = self.__iter__()
+      while( it.hasNext() ):
+         print( it.list_current.data, end=", " )
+         it.__next__()
+      print( "\n" )
