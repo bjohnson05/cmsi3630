@@ -6,6 +6,7 @@
 ###
 
 from ListNode import ListNode
+from Iterator import Iterator
 
 ###
 # this is the linked list itself
@@ -14,18 +15,14 @@ class LinkedList:
    head = None
    size = 0
    listCurrent = None
+   it = None
+
 
   # constructor for the LinkedList
    def __init__( self ):
       self.head = None
       self.size = 0
-
-#   def __iter__( self ):
-#      self.listCurrent = self.head
-#      return self
-
-#   def __next__( self ):
-#      return self.listCurrent.nextNode
+      it = Iterator( self )
 
   # return the number of nodes in the list
    def getSize( self ):
@@ -38,26 +35,30 @@ class LinkedList:
       self.head.nextNode = currentHead
       self.size += 1
 
-  # helper method to print the list
+  # helper method to print the list using a for loop
    def printList1( self ):
       currentNode = self.head
       for i in range( 0, self.getSize() ):
-         print( self.head.getData() )
-         self.head = self.head.nextNode
+         print( currentNode.getData() )
+         currentNode = currentNode.nextNode
 
   # get an Iterator that is pointing to a specific
   #   ListNode in the linked list
-   # def getIteratorAt( self, index ):
-   #    if( index > self.size ):
-   #       print( "   Sorry, getIteratorAt() ~ index out of range.\n" )
-   #    else:
-   #       print( "   ...in getIteratorAt(), list.size is: ", self.getSize() )
-   #       it = Iterator( self )
-   #       it.current = self.head
-   #       print( "   ...in getIteratorAt(), it.current is: ", it.current )
-   #       print( "   ...in getIteratorAt(), list.head.data is:", it.getCurrentData() )
-   #       while( index > 0 ):
-   #          it.current = it.current.next
-   #          index -= 1
-   #       return it
+   def getIteratorAt( self, index ):
+      if( index > self.size ):
+         print( "   Sorry, getIteratorAt() ~ index out of range.\n" )
+      else:
+         it = Iterator( self )
+         while( index > 0 ):
+            it.currentNode = it.currentNode.nextNode
+            index -= 1
+         return it
 
+  # helper method to print the list using the iterator's
+  # methods and a while loop
+   def printList2( self ):
+      it = self.getIteratorAt( 0 )
+      while( it.hasNext() ):
+         print( it.getCurrentData(), end=", " )
+         it.next()
+      print( it.getCurrentData() )

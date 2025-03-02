@@ -46,7 +46,7 @@ def main():
       if( dozens > 0 ):
          print( "{} dozen ".format( dozens ), end=" " )
       if( leftOver > 0 ):
-         print( "and {} eggs.".format( leftOver ) )
+         print( "and {} {}.".format( leftOver, ("eggs" if leftOver > 1 else "egg") ) )
 
 
 main()

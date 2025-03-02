@@ -7,17 +7,17 @@
 
 class ListNode:
    data = 0
-   next = None
+   nextNode = None
 
    def __init__( self, input ):
       self.data = input
-      self.next = None
+      self.nextNode = None
 
    def getData( self ):
       return self.data
 
 # test it out
-print( "\n\n   TESTING LISTNODE CLASS...\n" )
-ln = ListNode( 37 )
-print( "   ln.data is: ", ln.getData() )
+#print( "\n\n   TESTING LISTNODE CLASS...\n" )
+#ln = ListNode( 37 )
+#print( "   ln.data is: ", ln.getData() )
 

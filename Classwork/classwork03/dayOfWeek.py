@@ -2,9 +2,9 @@ import sys
 import time
 
 dayOfWeek = [ 'Monday', 'Tuesday', 'Wednesday', \
-              'Thursday' 'Friday', 'Saturday', 'Sunday' ]
+              'Thursday', 'Friday', 'Saturday', 'Sunday' ]
 
-if( len( sys.argv ) < 1 ):
+if( len( sys.argv ) < 2 ):
    print( "\n   You must supply a date of form yyyy-mm-dd.\n" )
 else:
    theDate = sys.argv[1]

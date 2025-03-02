@@ -12,12 +12,9 @@ class Iterator:
 
   # constructor for the Iterator
    def __init__( self, localList ):
-      print( "   ...in Iterator constructor, localList.size is: ", localList.getSize() )
-      print( "   ...in Iterator constructor, printing localList..." )
-      #localList.printList()
-      currentNode = localList.head
-      print( "   ...in Iterator constructor, currentNode is: ", currentNode )
-      print( "   ...in Iterator constructor, localList.head is: ", localList.head )
+      self.currentNode = localList.head
+      if( self.currentNode == None ):
+         print( "   ...in Iterator constructor, list is currently empty." )
 
   # set the next field of the current ListNode
   #   this will move the current 'pointer' down the line
@@ -26,14 +23,14 @@ class Iterator:
          print( "   Looks like the list is empty." )
          return
       else:
-         currentNode = currentNode.next
+         self.currentNode = self.currentNode.nextNode
 
   # check if the current ListNode is the tail
    def hasNext( self ):
-      return ( (currentNode != None) and (currentNode.next != None) )
+      return ( (self.currentNode != None) and (self.currentNode.nextNode != None) )
 
   # helper method to get the current data value
    def getCurrentData( self ):
-      return self.currentNode
+      return self.currentNode.getData()
 
 
