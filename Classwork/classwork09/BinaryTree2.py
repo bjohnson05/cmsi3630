@@ -10,29 +10,17 @@ from BinaryTreeNode import BinaryTreeNode
 def press_return():
    input( "\n\n        [press 'enter' to see the result]... <=" );
 
-def pre_order_printer( current_node ):
-   if( current_node == None ):
-      return
-   else:
+def visit( current_node ):
       print( "(", current_node.get_data(), ")", end="" )
-      pre_order_printer(current_node.get_child("L"))
-      pre_order_printer(current_node.get_child("R"))
+   
+def pre_order_printer( current_node ):
+   # You fill this in
 
 def post_order_printer( current_node ):
-   if( current_node == None ):
-      return
-   else:
-      post_order_printer(current_node.get_child("L"))
-      post_order_printer(current_node.get_child("R"))
-      print( "(", current_node.get_data(), ")", end="" )
+   # You fill this in
 
 def in_order_printer( current_node ):
-   if( current_node == None ):
-      return
-   else:
-      in_order_printer(current_node.get_child("L"))
-      print( "(", current_node.get_data(), ")", end="" )
-      in_order_printer(current_node.get_child("R"))
+   # You fill this in
 
 def main():
    root = BinaryTreeNode( 0 );
