@@ -25,43 +25,43 @@ rubric below to see what methods are required.
 scores:
 =====================================================
 Queue.py
-   Queue class compiles/runs                 [3 pt.]
-   display method exists                     [3 pt.]
+   Queue class compiles/runs                    3/3 pt.
+   display method exists                        3/3 pt.
 QueueApp.py or main in Queue.py
-   QueueApp class compiles/runs              [3 pt.]
-   tests insert()                            [3 pt.]
-   tests remove()                            [3 pt.]
-   tests display()                           [3 pt.]
-   tests wrap-around insert, remove, display [3 pt.]
-Deque.py  [EC}
-   Deque class compiles/runs                 [EC 1 pt.]
-   insertLeft method exists & works          [EC 1 pt.]
-   insertRight method exists & works         [EC 1 pt.]
-   removeLeft method exists & works          [EC 1 pt.]
-   removeRight method exists & works         [EC 1 pt.]
-   isEmpty method exists & works             [EC 1 pt.]
-   isFull method exists & works              [EC 1 pt.]
-DequeApp.py or main in Deque.py [EC]
-   tests insertLeft()                        [EC 1 pt.]
-   tests insertRight()                       [EC 1 pt.]
-   tests removeLeft()                        [EC 1 pt.]
-   tests removeRight()                       [EC 1 pt.]
-   tests isEmpty()                           [EC 1 pt.]
-   tests isFull()                            [EC 1 pt.]
+   QueueApp class compiles/runs                 3/3 pt.
+   tests insert()                               3/3 pt.
+   tests remove()                               3/3 pt.
+   tests display()                              3/3 pt.
+   tests wrap-around insert, remove, display    3/3 pt.
+Deque.py  EC}
+   Deque class compiles/runs                 EC 1/1 pt.
+   insertLeft method exists & works          EC 1/1 pt.
+   insertRight method exists & works         EC 1/1 pt.
+   removeLeft method exists & works          EC 1/1 pt.
+   removeRight method exists & works         EC 1/1 pt.
+   isEmpty method exists & works             EC 1/1 pt.
+   isFull method exists & works              EC 1/1 pt.
+DequeApp.py or main in Deque.py EC
+   tests insertLeft()                        EC 1/1 pt.
+   tests insertRight()                       EC 1/1 pt.
+   tests removeLeft()                        EC 1/1 pt.
+   tests removeRight()                       EC 1/1 pt.
+   tests isEmpty()                           EC 1/1 pt.
+   tests isFull()                            EC 1/1 pt.
 CircluarLinkedList.py
-   Circular linked list class compiles/runs  [3 pt.]
-   insertion method works                    [3 pt.]
-   deletion method works                     [3 pt.]
-   searching method works                    [3 pt.]
+   Circular linked list class compiles/runs     3/3 pt.
+   insertion method works                       3/3 pt.
+   deletion method works                        3/3 pt.
+   searching method works                       3/3 pt.
 CircularStack.py
-   circular stack class compiles/runs        [4 pt.]
-   tests work as advertised                  [4 pt.]
+   circular stack class compiles/runs           4/4 pt.
+   tests work as advertised                     4/4 pt.
 Coding style
-   Good names, consistent indenting          [4 pt.]
-   Headers in all files                      [5 pt.]
+   Good names, consistent indenting             4/4 pt.
+   Headers in all files                         5/5 pt.
 Josephus.py
-   Josephus problem compiles/runs            [EC 2 pt.]
-   works as advertised                       [EC 5 pt.]
+   Josephus problem compiles/runs            EC 2/2 pt.
+   works as advertised                       EC 5/5 pt.
 
 Total points is  50 points for Queue, Circular LL and Circular Stack plus Style
  extra credit is  7 points for Josephus problem
@@ -71,5 +71,6 @@ Total points is  50 points for Queue, Circular LL and Circular Stack plus Style
 
 You got 50 out of 50 which is 100% which is an A-plus
 You got 57 out of 50 which is 114% which is an A-plus
+You got 63 out of 50 which is 126% which is an A-plus
 You got 70 out of 50 which is 140% which is an A-plus
 
