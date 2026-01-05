@@ -12,17 +12,19 @@ and remove any duplicated values.  For example, in the array that contains
 research the way python handles lists ~ it will make your life easier!
 
 For the HighArrayApp.py file don't include this code in the same class file
-as "HighArray.PY".  You should have two separate files for this, both in
+as "HighArray.py".  You should have TWO SEPARATE FILES for this, both in
 the same directory, so that you can 'import' the 'HighArray.py' file as a
 'module' into the 'HighArrayApp.py' program.
 
 Submit both your source code files to your repo.  THERE MUST BE TWO PYTHON
-SOURCE FILES IN YOUR REPO FOR THIS ASSIGNMENT.
+SOURCE FILES IN YOUR REPO FOR THIS ASSIGNMENT TO GET FULL CREDIT.
 
 I have mentioned in class that it is a good idea to have a small "header"
 section in your files.  If you elect to include that in this assignment,
 you will get two extra credit points.  You can use either the "#" tags or
 the 'triple tic' comment method for block comments, which ever you like.
+Headers are extra credit for THIS assignment, but will be REQUIRED for all
+future assignments.
 
 There are a total of 20 points for this assignment as shown below.  If you
 get extra credit it is possible to get more than 100% for the assignment.
@@ -30,21 +32,23 @@ get extra credit it is possible to get more than 100% for the assignment.
 scores:
 =============================
 HighArray.py
-   coding style                     [3 pt.]
-   getMax() exists                  [1 pt.]
-   noDups() exists                  [1 pt.]
-   compiles/runs                    [1 pt.]
+   coding style                     [3 out of 3 pt.]
+   getMax() exists                  [1 out of 1 pt.]
+   noDups() exists                  [1 out of 1 pt.]
+   compiles/runs                    [1 out of 1 pt.]
 HighArrayApp.py
-   coding style                     [2 pt.]
-   compiles                         [1 pt.]
-   min 5 new tests for getMax()     [5 pt.]
-   test[s] for noDups               [1 pt.]
-   runs and passes all tests        [5 pt.]
-headers in both files               [2 pts. EC]
+   coding style                     [2 out of 2 pt.]
+   compiles                         [1 out of 1 pt.]
+   min 5 new tests for getMax()     [5 out of 5 pt.]
+   test[s] for noDups               [1 out of 1 pt.]
+   runs and passes all tests        [5 out of 5 pt.]
+
+headers in both files               [2 out of 2 pts. EC]
 
 Total possible score: 20 out of 20 which is 100% which is an A-plus
 
 Your score: 20 out of 20 which is 100% which is an A-plus
+   headers: 22 out of 20 which is 110% which is also an A-plus
 
 =============================
 Comments:
