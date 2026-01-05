@@ -1,2 +1,0 @@
-
-print( '\n Hello, world!' )
