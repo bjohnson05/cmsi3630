@@ -1,10 +1,8 @@
 # In-class Assignment #3
 
-Your mission [should you decide to accept it], is to implement the <code>insertValueAtIndex()</code> method, making 
-sure that if there isn't enough room in the list already, its size gets expanded by the amount of the 
-<code>STARTING_SIZE</code> value. 
+Your mission [should you decide to accept it], is to implement the <code>insertValueAtIndex()</code> method.  Do you need to worry about whether there is enough room in the list?  What happens if you insert a duplicate value to something already in the list? 
 
-Then, also add a method <code>checkIndex()</code> to validate an index value, and re-factor your code. 
+Next, also add a method <code>checkIndex()</code> to validate an index value, and re-factor your code.  Refactoring means to re-do your code to take into account some new "thing" you have decided to add or change.
 
 Also, add a new method <code>prepend()</code>, which adds a value at element zero of the list, moving all the other 
 values to make room. 
