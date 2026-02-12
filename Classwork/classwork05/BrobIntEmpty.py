@@ -17,11 +17,13 @@ class BrobInt:
    my_value   = []
    string_rep = ''
 
+  # constructor
    def __init__( self, value ):
       self.string_rep = value
       self.my_value   = [*self.string_rep]      # this is the 'unpacking' operator
       self.backwards  = self.reverse_me( self.my_value )
 
+  # reverse the string method 1
    def reverse_me( self, a ):
       b = []
       j = len( a ) - 1
@@ -30,6 +32,13 @@ class BrobInt:
          j -= 1
       return b
 
+  # reverse the string method 2
+   def reverse_me2( self, a ):
+      b = list( a )
+      b.reverse()
+      return b
+
+
    ## TODO: implement the addition function by filling in the
    ##   code under the comments below
    def add( self, other_brob_int ):
@@ -37,6 +46,7 @@ class BrobInt:
       sum = []
       shorter = []
       longer = []
+
       ## find the longer of the two numbers
       ##   put the two numbers into the appropriate lists
 
@@ -55,6 +65,7 @@ class BrobInt:
 
       ## turn it back into a string and return the result
 
+     # this is here as a placeholder so it will run
       print( "\n   OOPS!  Sorry, 'add()' not implemented yet." )
       sum = self.reverse_me( sum )
       return_value = "".join( sum )
