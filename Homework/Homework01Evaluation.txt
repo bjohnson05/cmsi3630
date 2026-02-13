@@ -2,7 +2,7 @@
 Homework01 Evaluation
 ======================
 For homework01, the focus is to make sure that your GitHub repository is set
-up and that your Java environment is installed and working properly.  The
+up and that your Python environment is installed and working properly.  The
 actual programming for the first part of the assignment is trivial, just a
 simple program to display "Hello World!" on the terminal window which was
 done in class anyhow..

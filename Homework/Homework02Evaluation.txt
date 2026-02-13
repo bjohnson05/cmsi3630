@@ -4,17 +4,22 @@ Homework02 Evaluation
 For the HighArray.py source file, be sure to use good coding practices to
 make your code pretty, artful, and maintainable.
 
+First, translate the code from the LaFore textbook from Java into Python.
+I have given you starting code for that in my GitHub repository.  Make sure
+that you have the basic file working before you proceed, so that if there
+are errors you know where they are coming from.
+
 You must add a "getMax()" method to the HighArray.py file, which returns
 the largest "key" [another word for "value"] in the array.  You must also
-add a "noDups()" method which will scan through the array elements to find
-and remove any duplicated values.  For example, in the array that contains
-"33 33 33 44 44 55 55 66" the result should be "33 44 55 66".  Be sure to
-research the way python handles lists ~ it will make your life easier!
+add a "noDups()" method which will find and remove any duplicated values.
+For example, in the array that contains "33 33 33 44 44 55 55 66" the
+result of colling "noDups()" should be "33 44 55 66".  Be sure to research
+the way python handles lists ~ it will make your life easier!
 
-For the HighArrayApp.py file don't include this code in the same class file
-as "HighArray.py".  You should have TWO SEPARATE FILES for this, both in
-the same directory, so that you can 'import' the 'HighArray.py' file as a
-'module' into the 'HighArrayApp.py' program.
+For the HighArrayApp.py file DO NOT include this code in the same source
+file as "HighArray.py".  You must have TWO SEPARATE FILES for this, both
+in the same directory, so that you can 'import' the 'HighArray.py' file as
+a 'module' into the 'HighArrayApp.py' program.
 
 Submit both your source code files to your repo.  THERE MUST BE TWO PYTHON
 SOURCE FILES IN YOUR REPO FOR THIS ASSIGNMENT TO GET FULL CREDIT.
@@ -22,9 +27,9 @@ SOURCE FILES IN YOUR REPO FOR THIS ASSIGNMENT TO GET FULL CREDIT.
 I have mentioned in class that it is a good idea to have a small "header"
 section in your files.  If you elect to include that in this assignment,
 you will get two extra credit points.  You can use either the "#" tags or
-the 'triple tic' comment method for block comments, which ever you like.
-Headers are extra credit for THIS assignment, but will be REQUIRED for all
-future assignments.
+the 'triple tic' comment method for block comments, your choice.  Headers
+are extra credit for THIS assignment, but will be REQUIRED for all future
+assignments.
 
 There are a total of 20 points for this assignment as shown below.  If you
 get extra credit it is possible to get more than 100% for the assignment.
@@ -56,3 +61,12 @@ Comments:
 
 
 Nice work!
+
+You should take the time to check the output of your program to verify that
+everything is working as it *should*.  If you look carefully through the
+output, you'll notice that when displaying the contents of the list, nothing
+is displayed.  That is because the "display()" method that was provided
+simply returns, without doing anything.  Something to consider: even if the
+problem specification doesn't ask for it, it's a good idea to add in code so
+that the user can actually see what is supposed to be happening!  No harm no
+foul this time, but something to be aware of for the future!

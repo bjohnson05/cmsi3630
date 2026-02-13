@@ -15,7 +15,10 @@ def factorial( n ):
       return( n * factorial( n - 1 ) )
 
 def main():
-   count = int( input( "\n   Enter an integer number:" ) )
-   print( "   The value of ", count, " factorial is: ", factorial( count ) )
+   if len(sys.argv) == 1:
+      count = int( input( "\n   Enter an integer number: " ) )
+   else:
+      count = int( sys.argv[1] )
+   print( "\n   The value of ", count, " factorial is: ", factorial( count ) )
 
 main()

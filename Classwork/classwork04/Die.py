@@ -19,7 +19,7 @@ class Die:
          self.sides = number_of_sides
 
    def roll( self ):
-      self.value = random.randint( 1, self.sides )
+      self.value = random.randint( 0, self.sides )
       return self.value
 
    def get_value( self ):

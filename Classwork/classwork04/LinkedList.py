@@ -56,13 +56,31 @@ class LinkedList:
    def print_list( self ):
       current_node = self.head
       for i in range( self.size ):
-         print( current_node.data )
+         print( "   ", current_node.data )
          current_node = current_node.next_node
 
   # Helper method to print the list using iterator.
    def printme( self ):
       it = self.__iter__()
+      print( "   ", end=" " )
       while( it.hasNext() ):
          print( it.list_current.data, end=", " )
          it.__next__()
+      print( it.list_current.data )
       print( "\n" )
+
+  # Helper method to get an iterator at the specified index
+   def getIteratorAt( self, index ):
+      it = self.__iter__()
+      while( index > 0 ):
+         it.__next__()
+         index = index - 1
+      return it
+
+  # Add a ListNode at a specific location in the list
+   def insertAt( self, index, value ):
+      return None
+
+  # Remove a ListNode at a specific location in the list
+   def removeAt( self, index ):
+      return None

@@ -6,8 +6,8 @@
 ###
 
 filename = 'test.txt'
-myFile = open( filename, "r+" )
-myFile.write( "\nHello, World!" )
+myFile = open( filename, "w" )
+myFile.write( "\nHello, World!\n" )
 myFile.write( "This is a line to write to the file.\n" )
 myFile.write( "This is another line to write.\n" )
 myFile.write( "This is the last line, followed by a bunch of newlines.\n" )
