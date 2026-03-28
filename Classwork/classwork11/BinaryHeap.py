@@ -47,13 +47,14 @@ class BinaryHeap:
    def bubble_up( self, index ):
       if( index == 0 ):     # base case:
          return             #  we are already at the root, so we are done
-      ## TODO: Implement the code to bubble up ~
-      ##  Find the parent of the current node
-      ##  if the value of the parent is less than the value of the current node
-      ##     then swap them
-      ##  keep going until the value of the parent is GREATER than the
-      ##     value of the current node
 
+      parent = self.get_parent( index )
+      parent_index = (int)((index -1) / 2)
+      if( self.uriah[parent_index].get_data() < self.uriah[index].get_data() ):
+         temp = self.uriah[index]
+         self.uriah[index] = self.uriah[parent_index]
+         self.uriah[parent_index] = temp
+         self.bubble_up( parent_index )
 
    # Adding in the deletions code.  Python list istmakes it easy to find the
    #  last node because it's at the end of the list.  We just need to swap it
@@ -74,13 +75,16 @@ class BinaryHeap:
          return
       root = self.uriah[index]
       next = None
-      ## TODO: implement the code to trickle down ~
-      ## take the child with the GREATER value of the two children
-      ## if that value is GREATER than the value of the current node
-      ##     then swap them
-      ## keep going until the value of the current node is greater
-      ##     than EITHER of the two child node values
-   
+      if( int(self.get_child( index, 'L' ).get_data()) > int(self.get_child( index, 'R' ).get_data()) ):
+         next = self.get_child( index, 'L' )
+      else:
+         next = self.get_child( index, 'R' )
+         next_index += 1
+      if( self.uriah[index].get_data() < self.uriah[next_index].get_data() ):
+         self.uriah[index] = next
+         self.uriah[next_index] = root
+      self.trickle_down( next_index )
+
    # See if the heap is empty or not
    def isEmpty( self ):
      return self.uriah.isEmpty()
