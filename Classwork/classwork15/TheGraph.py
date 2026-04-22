@@ -50,7 +50,10 @@ class TheGraph():
    def printGraph( self ):
       print()
       for i in range( len( self.vList ) ):
-         print( "   vList[", i, "]:", self.vList[i].getValue(), " adj:", self.vList[i].adjacent )
+         if i < 10:
+            print( "   vList[ ", i, "]:", self.vList[i].getValue(), " adj:", self.vList[i].adjacent )
+         else:
+            print( "   vList[", i, "]:", self.vList[i].getValue(), " adj:", self.vList[i].adjacent )
       return
 
 ###
